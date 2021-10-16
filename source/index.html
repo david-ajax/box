@@ -1,4 +1,3 @@
-<!-- Hello,我知道你在查看源代码! 为啥不直接把整个网站Clone下来?! 运行 "git clone git://github.com/david-ajax/david-ajax.github.io"但是注意,仓库使用 GPL 3.0 License! -->
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -30,12 +29,13 @@
 					<div class="row">
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<h1>欢迎</h1>
-                                <p>  欢迎使用静态文件分享存储索引系统, 此系统主要用于存放博客及资源文件, 存储由 GitHub 及 Vercel 提供支持</p>
-								<p>  如想查看源代码, 请移步至 <a href="https://www.github.com/david-ajax/sfis/">SFIS - David Ajax - GitHub</a></p>
-                                <p><a href="./files/">开始浏览文件</a><br>
-								<a href="https://www.wangzhiyu.ga">我的网站</a><br>
-								<a href="https://blog.wangzhiyu.ga">我的博客</a></p>
+								<h3>路径:<br>/$py_file_path</h3>
+								<p><a href="..">上一级目录</a></p>
+								$py_file_list
+                                <h3>说明</h3>
+								<hr>
+                                $py_file_readme
+								<hr>
 							</header>
 						</div>
 					</div>
@@ -58,6 +58,8 @@
 					<footer>
 						<ul id="copyright">
 							<li>Powered By Wang Zhiyu</li>
+							<li>Powered By SFIS</li>
+							<li>SFIS v1.0</li>>
 						</ul>
 					</footer>
 				</div>
