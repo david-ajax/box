@@ -62,6 +62,7 @@ def main():
     print("Completed")
 o_file = read_file("./source/index.html")
 os.chdir(".")
+os.system('date > date.log')
 static_path = os.getcwd()
 os.system("cd files && rm -rf $(find -name index.html) && cd ..")
 os.chdir("files")
