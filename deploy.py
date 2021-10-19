@@ -41,7 +41,7 @@ def create(go):
             plus = ""
             filetext = filetext +  '<p><a href="' + os.path.relpath(".",static_path+"/files/") + "/" + one + '" download="'  + one + '">' + one + plus + '</a><p>' + "\n"
     replace("index.html", r"$py_file_path" , os.path.relpath(".",static_path+"/files"))
-    replace("index.html", r"$py_file_back" , os.path.relpath("..",static_path+"/files))
+    replace("index.html", r"$py_file_back" , os.path.relpath("..",static_path+"/files"))
     replace("index.html", r"$py_file_list" ,filetext)
     if os.path.exists("README.md") == True and os.path.isfile("README.md") == True:
         replace("index.html", r"$py_file_readme" ,readmemd())
