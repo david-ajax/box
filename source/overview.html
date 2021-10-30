@@ -18,7 +18,7 @@
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="container">
-					<li><a href="#top">文件</a></li>
+					<li><a href="#top">总览</a></li>
 					<li><a href="#about">关于</a></li>
 				</ul>
 			</nav>
@@ -29,11 +29,20 @@
 					<div class="row">
 						<div class="col-12 col-7-large col-12-medium">
 							<header>
-								<h3>路径:<br>/$py_file_path</h3>
-								<p><a href="$py_file_back">上一级目录</a></p>
-								$py_file_list
+								<h3>总览</h3>
+								<p><h6><a href="/">回到主页</a></h6></p>
 								<hr>
-                                $py_file_readme
+                                <script>
+                                    document.write("域名: " + document.domain + "<br>");
+                                    document.write("端口: " + window.location.port + "<br>");
+                                    document.write("协议: " + window.location.protocol + "<br>")
+                                </script>
+								已用空间: $py_file_used_storage<br>
+								服务器系统版本: $py_file_os_status<br>
+								服务器部署时间: $py_file_os_time<br>
+								<a href="deploy.log">下载部署日志</a><br>
+								您无法在此修改任何数据, 因为这是一个静态页面.<br>
+								我们仅仅列出了一些可供参考的只读数据<br>
 								<hr>
 							</header>
 						</div>
@@ -48,8 +57,8 @@
 						<div class="col-12">
 							<hr />
 							<h3>寻找我:</h3>
-							<a href="www.wangzhiyu.ga">我的主页</a>
-							<a href="blog.wangzhiyu.ga">我的博客</a>
+							<a href="https://www.wangzhiyu.ga">我的主页</a><br/>
+							<a href="https://blog.wangzhiyu.ga">我的博客</a><br/>
 							<ul class="social">
 								<li><a href="https://github.com/david-ajax/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 							</ul>
@@ -59,7 +68,8 @@
 					<footer>
 						<ul id="copyright">
 							<li>Powered by Wang Zhiyu</li>
-							<li>Based on SFIS</li>						</ul>
+							<li>Based on SFIS</li>						
+						</ul>
 					</footer>
 				</div>
 			</article>
