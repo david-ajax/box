@@ -78,7 +78,7 @@ def main():
     for go in folderl:
         create(go)
     print("Completed")
-replace("../storage.log","     files","")
+replace("./storage.log","     files","")
 o_file = read_file("./source/index.html")
 static_path = os.getcwd()
 main()
