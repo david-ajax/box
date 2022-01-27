@@ -1,6 +1,7 @@
 from lib import *
+import os
 
-version = "v0.1.1"
+version = "v0.1.2 Stable"
 indexhtml = File.read("./default/theme/index.html")
 welcomehtml = File.read("./default/theme/welcome.html")
 overviewhtml = File.read("./default/theme/overview.html")
@@ -79,10 +80,12 @@ def welcome():
 
 if __name__ == "__main__":
     welcome()
+    os.system('echo start > log')
     p = ["files"]
     for one in Path.tree("files", "folder"):
         p.append(one)
     for one in p:
+        File.rewrite('log', File.read('log') + one)
         create(one)
     overview()
     about()
