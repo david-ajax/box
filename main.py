@@ -12,7 +12,7 @@ config = Data.config_data
 def about():
     File.rewrite("about.html", abouthtml)
     File.replace("about.html", "$title", config["title"])
-    File.replace("about.html", "$sfis_version", version) 
+    File.replace("about.html", "$sfis_version", version)
     File.replace("about.html", "$copyright", "<li>&copy " + System.year + " " + config["owner"] + "</li>")
     if config["about"] == True:
         File.replace("about.html", "$about", "<li>基于 <a href = 'https://github.com/david-ajax/sfis'>SFIS 项目</a></li>")
@@ -27,8 +27,8 @@ def overview():
     File.replace("overview.html", "$os_edition", System.os_edition)
     File.replace("overview.html", "$cpu_version", System.processor_numbers)
     File.replace("overview.html", "$local_time", System.local_time)
-    File.replace("overview.html", "$python_version", System.python_version) 
-    File.replace("overview.html", "$sfis_version", version) 
+    File.replace("overview.html", "$python_version", System.python_version)
+    File.replace("overview.html", "$sfis_version", version)
     File.replace("overview.html", "$copyright", "<li>&copy " + System.year + " " + config["owner"] + "</li>")
     if config["about"] == True:
         File.replace("overview.html", "$about", "<li>基于 <a href = 'https://github.com/david-ajax/sfis'>SFIS 项目</a></li>")
