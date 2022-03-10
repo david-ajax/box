@@ -41,12 +41,12 @@ def create(one):
     folderlist = Path.ls(".", "folder")
     alllist = ""
     for one in folderlist:
-        alllist = alllist + "<br><a href='" + one + "'>" + one + "/</a>"
+        alllist = alllist + "<br><a href='/" + Path.contrast(".", static_path) + "/" + one + "'>" + one + "/</a>"
     for one in filelist:
         if one == "index.html" or one == "":
             continue
         else:
-            alllist = alllist + "<br><a href='" + one + "'>" + one + "</a>"
+            alllist = alllist + "<br><a href='/" + Path.contrast(".", static_path) + "/" + one + "'>" + one + "</a>"
     File.rewrite("index.html", indexhtml)
     File.replace("index.html", "$title", config["title"])
     File.replace("index.html", "$path", Path.contrast(os.getcwd(), static_path))
